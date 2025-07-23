@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <title>O futuro da automação</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    rel="stylesheet"
+  />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+        height: auto; /* permite scroll no desktop */
+        min-height: 100vh;
+        width: 100%;
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(-45deg, #0d1b2a, #1b263b, #324a65, #1b263b);
+        background-size: 400% 400%;
+        animation: gradient 12s ease infinite;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    /* Centralizar verticalmente e evitar scroll só em telas pequenas */
+    @media (max-width: 600px) {
+    html, body {
+        height: 100vh;
+        overflow: hidden;
+        justify-content: center;
+    }
+}
+
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h1 {
+      font-size: 2.5em;
+      font-weight: 600;
+      animation: fadeIn 1s ease-out;
+      max-width: 90vw;
+    }
+
+    .gear {
+      width: 55px;
+      height: 55px;
+      border: 6px solid #ffffffcc;
+      border-top: 6px solid transparent;
+      border-radius: 50%;
+      animation: spin 1.2s linear infinite, fadeIn 1.3s ease-out;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    img.logo {
+      max-width: 220px;
+      width: 90%;
+      height: auto;
+      animation: fadeIn 1.6s ease-out;
+      filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.15));
+      margin: 0 auto;
+    }
+
+    .tagline {
+      font-size: 1.1em;
+      color: #ccddee;
+      opacity: 0.85;
+      animation: fadeIn 1.8s ease-out;
+      max-width: 90vw;
+      margin-bottom: 10px;
+    }
+
+    .follow-text {
+      font-size: 1.15em;
+      margin-bottom: 10px;
+      color: #dce3e8;
+      font-weight: 500;
+      animation: fadeIn 2s ease-out;
+      max-width: 90vw;
+    }
+
+    .social {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      animation: fadeIn 2.2s ease-out;
+    }
+
+    .social a {
+      font-size: 2.2em;
+      transition: transform 0.3s ease;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .social a.instagram {
+      color: #C13584; /* tom rosa arroxeado Instagram */
+    }
+    .social a.linkedin {
+      color: #0A66C2; /* azul LinkedIn */
+    }
+    .social a.email {
+      color: #fdd835; /* amarelo dourado */
+    }
+
+    .social a:hover {
+      transform: scale(1.3);
+      filter: brightness(1.2);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsivo */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2em;
+      }
+
+      .gear {
+        width: 42px;
+        height: 42px;
+        border-width: 5px;
+      }
+
+      img.logo {
+        max-width: 160px;
+      }
+
+      .tagline {
+        font-size: 1em;
+      }
+
+      .follow-text {
+        font-size: 1.05em;
+      }
+
+      .social a {
+        font-size: 1.8em;
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>O futuro da automação está chegando</h1>
+
+  <div class="gear" aria-hidden="true"></div>
+
+  <img class="logo" src="onizi.png" alt="Logo da Marca" />
+
+  <div class="tagline">Tecnologia que transforma. Automação que aproxima.</div>
+
+  <div class="follow-text">Fique por dentro das novidades! Siga-nos nas redes sociais:</div>
+
+  <nav class="social" role="navigation" aria-label="Redes sociais">
+    <a href="https://www.instagram.com/suaempresa" target="_blank" title="Instagram" aria-label="Instagram" class="instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.linkedin.com/company/suaempresa" target="_blank" title="LinkedIn" aria-label="LinkedIn" class="linkedin">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="mailto:contato@suaempresa.com" title="E-mail" aria-label="Enviar e-mail" class="email">
+      <i class="fas fa-envelope"></i>
+    </a>
+  </nav>
+</body>
+</html>
